@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-app  # Replace with your desired deployment name
+spec:
+  replicas: 2  # Number of replicas (pods) to run
+  selector:
+    matchLabels:
+      app: fastapi-app
+  template:
+    metadata:
+      labels:
+        app: fastapi-app
+    spec:
+      containers:
+      - name: fastapi-app
+        image: tmr_api:v1
+        ports:
+        - containerPort: 8000
+        resources:
+          # Define resource requests and limits for your application (optional)
+          # requests:
+          #   memory: "100Mi"
+          #   cpu: "100m"
+          # limits:
+          #   memory: "200Mi"
+          #   cpu: "200m"
+      restartPolicy: Always  # Restart containers on failure

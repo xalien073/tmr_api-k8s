@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-service  # Replace with your desired service name
+spec:
+  type: NodePort  # Use NodePort for exposing through a random port
+  selector:
+    app: fastapi-app
+  ports:
+  - protocol: TCP
+    port: 80  # External port (can be customized)
+    targetPort: 8000  # Port of the container running the application
+    # Optional field
+    # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
+    nodePort: 30007
+  
