@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fast-cm # Replace with your desired config map name
+data:
+  URL: gone!
+  TEST: is changing!
+  PORT: port_mumber
+  # Add other environment variables you need here
