@@ -1,8 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fastapi-app  # Replace with your desired deployment name
+name: fastapi-app  # Replace with your desired deployment name
 spec:
+<<<<<<< HEAD
   replicas: 2  # Number of replicas (pods) to run
   selector:
     matchLabels:
@@ -56,3 +57,28 @@ spec:
 #           #   memory: "200Mi"
 #           #   cpu: "200m"
 #       restartPolicy: Always  # Restart containers on failure
+=======
+replicas: 2  # Number of replicas (pods) to run
+selector:
+matchLabels:
+app: fastapi-app
+template:
+metadata:
+labels:
+app: fastapi-app
+spec:
+containers:
+- name: fastapi-app
+image: !image_tag! 
+ports:
+- containerPort: 8000
+resources:
+# Define resource requests and limits for your application (optional)
+# requests:
+#   memory: "100Mi"
+#   cpu: "100m"
+# limits:
+#   memory: "200Mi"
+#   cpu: "200m"
+restartPolicy: Always  # Restart containers on failure
+>>>>>>> 345e37086ec458246b17a668e6cbe6e4ef5852ad
