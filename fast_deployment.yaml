@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: fastapi-app
-          image: xalien073/tmr_api:53730e15b0310f1ac7e4f8559b8706ae1c02d8c2
+          image: xalien073/tmr_api:8914d8a33479138b1e3e938d6f3304aba9f9ba3c
           ports:
             - containerPort: 8000
       restartPolicy: Always  # Restart containers on failure
