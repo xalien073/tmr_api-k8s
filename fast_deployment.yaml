@@ -13,16 +13,23 @@ spec:
         app: fastapi-app
     spec:
       containers:
-        - name: fastapi-app
-          image: xalien073/tmr_api:795669d20fe536f8097da892e433b3ddb9bf8b5c
-          ports:
-            - containerPort: 8000
+      - name: fastapi-app
+        image: xalien073/tmr_api:64241a929f470ae97bea29b38ad6ce346ec29021
+        ports:
+        - containerPort: 8000
+        volumeMounts:
+        - name: fast-volume # Name for the volume mount
+          mountPath: /app/cm # Adjust the mount path based on your application structure
+      volumes:
+      - name: fast-volume # Same name as the volume mount
+        configMap:
+          name: fast-cm
+        # resources:
+          # Define resource requests and limits for your application (optional)
+          # requests:
+          #   memory: "100Mi"
+          #   cpu: "100m"
+          # limits:
+          #   memory: "200Mi"
+          #   cpu: "200m"
       restartPolicy: Always  # Restart containers on failure
-      # Define resource requests and limits for your application (optional)
-      # resources:
-      #   requests:
-      #     memory: "100Mi"
-      #     cpu: "100m"
-      #   limits:
-      #     memory: "200Mi"
-      #     cpu: "200m"
