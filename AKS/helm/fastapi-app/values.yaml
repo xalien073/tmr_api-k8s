@@ -1,0 +1,17 @@
+replicaCount: 2
+
+image:
+  repository: xalien073/tmr_api
+  tag: e64f562e100748f1ed68f2ffbe5645cd9d087768
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30007
+
+mongodb:
+  uri: mongodb://cosmosformeals:arXwlJKewLHGHuxKAsTevw9gfPOykvveO8HkKbCqwqvvX2A9A0F8SpCSpO1WcTPxQWpgg3J9QAlLACDbv62Ztw==@cosmosformeals.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@cosmosformeals@
+  dbName: cuisine_reviews
+
+resources: {}
