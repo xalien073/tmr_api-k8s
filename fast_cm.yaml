@@ -4,6 +4,6 @@ metadata:
   name: fast-cm # Replace with your desired config map name
 data:
   # URL: gone!
-  MONGO_URI: 
+  MONGO_URI: "will replace"
   DATABASE_NAME: cuisine_reviews
   # Add other environment variables you need here
