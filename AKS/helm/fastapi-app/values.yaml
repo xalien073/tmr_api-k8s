@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: xalien073/tmr_api
-  tag: 5d7b3f10d79a9b054b6587811210c2d1a89a40f2
+  tag: 6de60185026e194ac26bf7aa2bcf673eaecfb9a4
   pullPolicy: IfNotPresent
 
 service:
