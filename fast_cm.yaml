@@ -3,5 +3,4 @@ kind: ConfigMap
 metadata:
   name: fast-cm # Replace with your desired config map name
 data:
-  DATABASE_NAME: cuisine_reviews
   # Add other environment variables you need here
