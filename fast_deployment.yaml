@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: fastapi-app
-        image: xalien073/tmr_api:6c2268a75e23b163e99eae0ebf30fa9e61eeb953
+        image: xalien073/tmr_api:5d7b3f10d79a9b054b6587811210c2d1a89a40f2
         ports:
         - containerPort: 8000
         volumeMounts:
