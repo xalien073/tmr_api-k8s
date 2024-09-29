@@ -11,7 +11,7 @@ service:
   nodePort: 30007
 
 mongodb:
-  uri: ""
+  uri: 
   dbName: cuisine_reviews
 
 resources: {}

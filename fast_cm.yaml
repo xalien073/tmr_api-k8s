@@ -4,6 +4,6 @@ metadata:
   name: fast-cm # Replace with your desired config map name
 data:
   # URL: gone!
-  MONGO_URI: mongodb://cosmosformeals:arXwlJKewLHGHuxKAsTevw9gfPOykvveO8HkKbCqwqvvX2A9A0F8SpCSpO1WcTPxQWpgg3J9QAlLACDbv62Ztw==@cosmosformeals.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@cosmosformeals@
+  MONGO_URI: 
   DATABASE_NAME: cuisine_reviews
   # Add other environment variables you need here
