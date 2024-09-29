@@ -10,5 +10,8 @@ service:
   port: 80
   nodePort: 30007
 
+mongodb:
+  # uri: "will replace"
+  dbName: cuisine_reviews
 
 resources: {}
